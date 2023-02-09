@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Ample lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Ample admin lite dashboard bootstrap 5 dashboard template">
+    <meta name="description"
+        content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="robots" content="noindex,nofollow">
+    <title>About Us</title>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'logo/mini_logo.png' %}">
+    <!-- Custom CSS -->
+   <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+        data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar" data-navbarbg="skin5">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header" data-logobg="skin6">
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <a class="navbar-brand" href="{% url 'dashboard' %}">
+                        <!-- Logo icon -->
+                        <b class="logo-icon">
+                            <!-- Dark Logo icon -->
+                            <img src="{% static 'logo/mini-logo.png' %}" alt="homepage" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text -->
+                        <span class="logo-text">
+                            <!-- dark Logo text -->
+                            <img src="{% static 'logo/logo-1.png' %}" alt="homepage" />
+                        </span>
+                    </a>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <!-- <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
+                        href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                </div> -->
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+
+                    <!-- <a class="navbar-brand" href="{% url 'dashboard' %}">GeoMapping</a> -->
+                            
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <!-- <ul class="navbar-nav ms-auto d-flex align-items-center"> -->
+
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <!-- <li class=" in">
+                            <form role="search" class="app-search d-none d-md-block me-3">
+                                <input type="text" placeholder="Search..." class="form-control mt-0">
+                                <a href="" class="active">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </form>
+                        </li> -->
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                        <!-- <li>
+                            <a class="profile-pic" href="#">
+                                <img src="{% static 'plugins/images/users/varun.jpg' %}" alt="user-img" width="36"
+                                    class="img-circle"><span class="text-white font-medium">Steave</span></a>
+                        </li> -->
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                    <!-- </ul> -->
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <!-- User Profile-->
+                        <li class="sidebar-item pt-2">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{% url 'dashboard' %}"
+                                aria-expanded="false">
+                                <i class="far fa-clock" aria-hidden="true"></i>
+                                <span class="hide-menu"><strong>DASHBOARD</strong></span>
+                            </a>
+                        </li>
+                        <!-- <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="profile.html"
+                                aria-expanded="false">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="hide-menu">Profile</span>
+                            </a>
+                        </li> -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{% url 'basic_table' %}"
+                                aria-expanded="false">
+                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <span class="hide-menu"><strong>BASIC TABLE</strong></span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{% url 'covisu' %}"
+                                aria-expanded="false">
+                                <i class="fas fa-chart-area" aria-hidden="true"></i>
+                                <span class="hide-menu"><strong>C O V I S U</strong></span>
+                            </a>
+                        </li>
+                        <!-- <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="fontawesome.html"
+                                aria-expanded="false">
+                                <i class="fa fa-font" aria-hidden="true"></i>
+                                <span class="hide-menu">Icon</span>
+                            </a>
+                        </li> -->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{% url 'map' %}"
+                                aria-expanded="false">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                                <span class="hide-menu"><strong>VIEW MAP</strong></span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{% url 'about-us' %}"
+                                aria-expanded="false">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <span class="hide-menu"><strong>ABOUT US</strong></span>
+                            </a>
+                        </li>
+                        <!-- <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="404.html"
+                                aria-expanded="false">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <span class="hide-menu">Error 404</span>
+                            </a>
+                        </li>
+                        <li class="text-center p-20 upgrade-btn">
+                            <a href="https://www.wrappixel.com/templates/ampleadmin/"
+                                class="btn d-grid btn-danger text-white" target="_blank">
+                                Upgrade to Pro</a> -->
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper" style="min-height: 250px;">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb bg-white">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">About Us</h4>
+                    </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                        <div class="d-md-flex">
+                            <ol class="breadcrumb ms-auto">
+                                <li><a href="{% url 'dashboard' %}" class="fw-normal">Dashboard</a></li>
+                            </ol>
+                            <!-- <a href="https://www.wrappixel.com/templates/ampleadmin/" target="_blank"
+                                class="btn btn-danger  d-none d-md-block pull-right ms-3 hidden-xs hidden-sm waves-effect waves-light text-white">Upgrade
+                                to Pro</a> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+               
+                <div class="white-box">
+                    <div class="card bg-dark text-white">
+                        <img class="card-img" src="{% static 'image/C.jpg' %}" alt="Card image">
+                        <div class="card-img-overlay">
+                          <!-- <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <p class="card-text">Last updated 3 mins ago</p> -->
+                            <div class="col-md-12 text-center">
+                                <h1 class="card-title" style="font-size: 50px"><strong>SUBAY COVID & C O V I S U</strong></h1>
+                                <div class="border border-danger rounded p-3 mb-2 bg-light text-dark">
+                                    <span class="h5 .lead">
+                                        The Philippines response to COVID-19 has been termed as one of the world's longest and most stringent lockdowns. Several provinces and cities were placed under lockdown, transportation was restricted, and masks and social isolation were rigidly enforced. With the ongoing coronavirus outbreak, the entire medical community is seeking to control the spread of the disease. The disease has been affecting Filipino citizens, and there is a lack of knowledge and understanding of its origins and how it is transmitted in this country. To address this matter, the researchers aim to design and develop a Web Application using Django Web Framework embedded with Network Science using Gephi Software to visualize and analyze the spread and transmission patterns to determine the source of coronavirus within the Philippines' municipalities and how the virus is transmitted.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 text-center">
+                        <h1 style="font-size: 35px"><strong>Our Team</strong></h1>
+                        <!-- <p class="h5 .lead">A Visual Representation of the Spread of Covid-19 in the Philippines</p> -->
+                    </div>
+
+                    <!-- First Group -->
+                    <div class="card-group">
+                        <div class="card">
+                            <img class="card-img-top rounded" src="{% static 'image/A.jpg' %}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title mb-0"><b>Almie Kaye Jane L. Pagente</b></h5>
+                                <p class="card-text text-muted">Research Assistant</p>
+                                <p class="card-text" style="text-align: justify;">
+                                    Research assistant and the co-author of the paper entitled Spatial Mapping and Clustering of COVID Facilities in the Philippines with the Analysis of the Spread of COVID Cases using Network Science. A graduate of Bachelor of Science in Information Technology major in Network Systems. Participated in the 4th Colleges and Universities Public Service Conference (CUPSCon4) event held by the UP Padayon Public Service Office of the University of the Philippines as the presenter and representative of her group last October 2021.
+                                </p>
+                                <div class="">
+                                    <a class="btn btn-primary mb-3" style="background-color: #3b5998;" href="https://www.facebook.com/profile.php?id=100006839867336&mibextid=ZbWKwL" role="button" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-primary mb-3" style="background-color: #55acee;" href="https://twitter.com/Almie_Kaye" role="button" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-primary mb-3" style="background-color: #0082ca;" href="www.linkedin.com/in/almie-kaye-jane-pagente-403981223" role="button" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top rounded" src="{% static 'image/P.jpg' %}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title mb-0"><b>Pocholo Pio B. Bernad</b></h5>
+                                <p class="card-text text-muted">Web Developer</p>
+                                <p class="card-text" style="text-align: justify;">
+                                    Web developer and one of the authors of the paper entitled Spatial Mapping and Clustering of COVID Facilities in the Philippines with the Analysis of the Spread of COVID Cases using Network Science. A graduate with a degree in Bachelor of Science in Information Technology major in Network Systems, and gain knowledge and passion in creating web applications and designing web pages. With his group, they participated in the NASA Space App Challenge 2021 Iligan-Cagayan Chapter and won 2nd place.
+                                </p>
+                                <div class="">
+                                    <a class="btn btn-primary mb-3" style="background-color: #3b5998;" href="https://www.facebook.com/pocholo16.bernad/" role="button" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-primary mb-3" style="background-color: #55acee;" href="https://twitter.com/Pocholo_Bernad" role="button" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-primary mb-3" style="background-color: #0082ca;" href="https://www.linkedin.com/in/pocholo-pio-545392182/" role="button" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top rounded" src="{% static 'image/K.jpg' %}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title mb-0"><b>Kimberly D. Omamos</b></h5>
+                                <p class="card-text text-muted">Researcher</p>
+                                <p class="card-text" style="text-align: justify;">
+                                    Researcher and the co-author of the paper entitled Spatial Mapping and Clustering of COVID Facilities in the Philippines with the Analysis of the Spread of COVID Cases using Network Science. A graduate of a degree in Bachelor of Science in Information Technology major in Network Systems. And has a fascination with creating art using multimedia. Participated in the 20th MSU-IIT Annual In-House Review of Research and Development Projects as the presenter and representative of her group. They won 1st place in the Ongoing Projects: Mathematical and Information Sciences category last October 2022.
+                                </p>
+                                <div class="">
+                                    <a class="btn btn-primary mb-3" style="background-color: #3b5998;" href="https://www.facebook.com/kimberly.omamos.3" role="button" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-primary mb-3" style="background-color: #55acee;" href="#!" role="button" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-primary mb-3" style="background-color: #0082ca;" href="https://www.linkedin.com/mwlite/in/kimberly-omamos-a14aaa171" role="button" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Group -->
+                    <div class="card-group">
+                        <div class="card">
+                            <img class="card-img-top rounded" src="{% static 'image/Prince.png' %}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title mb-0"><b>Prince Clint Rene DeMesa</b></h5>
+                                <p class="card-text text-muted">Web Developer</p>
+                                <p class="card-text" style="text-align: justify;">
+                                    A co-web developer and a co-author of the paper titled "Spatial Mapping and Clustering of COVID Facilities in the Philippines with the Analysis of the Spread of COVID Cases using Network Science." A student at Mindanao State University - Iligan Institute of Technology, studying Information Technology with a focus on Networks. Have a strong interest in web front-end design and participated in the NASA International Space Apps Challenge held in Iligan on October 2-3, 2021.
+                                </p>
+                                <div class="">
+                                    <a class="btn btn-primary mb-3" style="background-color: #3b5998;" href="https://www.facebook.com/Preynsdemesa1/" role="button" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-primary mb-3" style="background-color: #55acee;" href="https://twitter.com/moko_moshi" role="button" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-primary mb-3" style="background-color: #0082ca;" href="#" role="button" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top rounded" src="{% static 'image/Jay.png' %}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title mb-0"><b>Eljay Dequeros</b></h5>
+                                <p class="card-text text-muted">Researcher</p>
+                                <p class="card-text" style="text-align: justify;">
+                                    A researcher and a co-author of the paper entitled “Spatial Mapping and Clustering of COVID Facilities in the Philippines with the Analysis of the Spread of COVID Cases using Network Science.” Currently taking up Information Technology major in Networks at Mindanao State University - Iligan Institute of Technology. Participated in NASA International Space Apps Challenge held in Iligan on October 2-3, 2021.
+                                </p>
+                                <div class="">
+                                    <a class="btn btn-primary mb-3" style="background-color: #3b5998;" href="https://www.facebook.com/jaydqrs/" role="button" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-primary mb-3" style="background-color: #55acee;" href="https://twitter.com/canyonkuma" role="button" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-primary mb-3" style="background-color: #0082ca;" href="https://www.linkedin.com/in/blue-jay-b083781a4/" role="button" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top rounded" src="{% static 'image/Donna.png' %}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title mb-0"><b>Donnabelle Carpentero</b></h5>
+                                <p class="card-text text-muted">Researcher</p>
+                                <p class="card-text" style="text-align: justify;">
+                                    A researcher and a co-author of the paper entitled “Spatial Mapping and Clustering of COVID Facilities in the Philippines with the Analysis of the Spread of COVID Cases using Network Science.” Pursuing a degree in Information Technology with a specialization in Networks at Mindanao State University - Iligan Institute of Technology. Presented their thesis at the 4th Colleges and Universities Public Service Conference on October 21, 2021.
+                                </p>
+                                <div class="">
+                                    <a class="btn btn-primary mb-3" style="background-color: #3b5998;" href="https://www.facebook.com/donna.belle.585" role="button" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-primary mb-3" style="background-color: #55acee;" href="https://twitter.com/mylovednn" role="button" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-primary mb-3" style="background-color: #0082ca;" href="#" role="button" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer text-center"> 2021 © GeoMapping </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="{% static 'plugins/bower_components/jquery/dist/jquery.min.js' %}"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="{% static 'bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/app-style-switcher.js' %}"></script>
+    <!--Wave Effects -->
+    <script src="{% static 'js/waves.js' %}"></script>
+    <!--Menu sidebar -->
+    <script src="{% static 'js/sidebarmenu.js' %}"></script>
+    <!--Custom JavaScript -->
+    <script src="{% static 'js/custom.js' %}"></script>
+</body>
+
+</html>
